@@ -16,5 +16,12 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
             Name = name;
             Ingredients = new List<Ingredient>();
         }
+
+        public void AddIngredient(Ingredient ingredient)
+        {
+            Ingredients.Add(ingredient);
+        }
+
+
     }
 }
