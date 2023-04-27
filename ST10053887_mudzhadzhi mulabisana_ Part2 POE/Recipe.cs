@@ -22,6 +22,14 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
             Ingredients.Add(ingredient);
         }
 
-
+        public int CalculateTotalCalories()
+        {
+            int totalCalories = 0;
+            foreach (Ingredient ingredient in Ingredients)
+            {
+                totalCalories += ingredient.Calories;
+            }
+            return totalCalories;
+        }
     }
 }
