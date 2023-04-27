@@ -52,7 +52,17 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
                 Console.WriteLine($"{i + 1}. {recipes[i].Name}");
             }
 
+        Console.WriteLine("Enter the number of the recipe you'd like to view:");
+            int recipeIndex = int.Parse(Console.ReadLine()) - 1;
 
+        Recipe selectedRecipe = recipes[recipeIndex];
+        Console.WriteLine($"Ingredients for {selectedRecipe.Name}:");
+            foreach (Ingredient ingredient in selectedRecipe.Ingredients)
+            {
+                Console.WriteLine($"{ingredient.Name} - {ingredient.Calories} calories - {ingredient.FoodGroup}");
+            }
+
+        
 }
 }
 }
