@@ -31,5 +31,10 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
             }
             return totalCalories;
         }
+
+        public int CompareTo(Recipe other)
+        {
+            return Name.CompareTo(other.Name);
+        }
     }
 }
