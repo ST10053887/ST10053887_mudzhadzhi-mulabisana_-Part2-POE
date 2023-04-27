@@ -11,6 +11,10 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
         public string Name { get; set; }
         public List<Ingredient> Ingredients { get; set; }
 
-
+        public Recipe(string name)
+        {
+            Name = name;
+            Ingredients = new List<Ingredient>();
+        }
     }
 }
