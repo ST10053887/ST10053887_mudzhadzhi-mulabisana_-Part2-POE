@@ -42,9 +42,9 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
             {
                 break;
             }
-        }
+        
 
-        recipes.Sort();
+            recipes.Sort();
 
             Console.WriteLine("Recipes:");
             for (int i = 0; i<recipes.Count; i++)
@@ -52,17 +52,28 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
                 Console.WriteLine($"{i + 1}. {recipes[i].Name}");
             }
 
-        Console.WriteLine("Enter the number of the recipe you'd like to view:");
-            int recipeIndex = int.Parse(Console.ReadLine()) - 1;
+            Console.WriteLine("Enter the number of the recipe you'd like to view:");
+                int recipeIndex = int.Parse(Console.ReadLine()) - 1;
 
-        Recipe selectedRecipe = recipes[recipeIndex];
-        Console.WriteLine($"Ingredients for {selectedRecipe.Name}:");
+            Recipe selectedRecipe = recipes[recipeIndex];
+            Console.WriteLine($"Ingredients for {selectedRecipe.Name}:");
             foreach (Ingredient ingredient in selectedRecipe.Ingredients)
             {
                 Console.WriteLine($"{ingredient.Name} - {ingredient.Calories} calories - {ingredient.FoodGroup}");
             }
 
+
+            Console.WriteLine($"Total calories: {selectedRecipe.CalculateTotalCalories()}");
         
-}
+            if (selectedRecipe.CalculateTotalCalories() > 300)
+            {
+                NotifyUserExceedCalories?.Invoke(selectedRecipe.Name);
+            }
+
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+    }
 }
 }
