@@ -33,6 +33,17 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
                 recipe.AddIngredient(new Ingredient(ingredientName, calories, foodGroup));
             }
 
+            recipes.Add(recipe);
+            Console.WriteLine("Recipe added!");
+
+            Console.WriteLine("Would you like to add another recipe? (y/n)");
+            string choice = Console.ReadLine();
+            if (choice.ToLower() == "n")
+            {
+                break;
+            }
         }
+
     }
+}
 }
