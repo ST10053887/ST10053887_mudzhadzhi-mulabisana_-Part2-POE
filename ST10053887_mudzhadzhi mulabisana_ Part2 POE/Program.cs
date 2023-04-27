@@ -73,7 +73,7 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
-
+        public static event Action<string> NotifyUserExceedCalories;
     }
 }
 }
