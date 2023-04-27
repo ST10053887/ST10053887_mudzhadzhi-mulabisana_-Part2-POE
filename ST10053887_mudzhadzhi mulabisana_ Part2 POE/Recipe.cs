@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
 {
-    internal class Recipe
+    internal class Recipe : IComparable<Recipe>
     {
+        public string Name { get; set; }
+        public List<Ingredient> Ingredients { get; set; }
+
+
     }
 }
