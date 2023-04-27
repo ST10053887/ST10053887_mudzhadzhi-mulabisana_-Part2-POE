@@ -44,6 +44,15 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
             }
         }
 
-    }
+        recipes.Sort();
+
+            Console.WriteLine("Recipes:");
+            for (int i = 0; i<recipes.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {recipes[i].Name}");
+            }
+
+
+}
 }
 }
