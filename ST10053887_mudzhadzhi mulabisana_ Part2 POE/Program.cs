@@ -10,6 +10,7 @@ namespace ST10053887_mudzhadzhi_mulabisana__Part2_POE
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
